@@ -1,0 +1,54 @@
+<!doctype=html>
+<html>
+<head>
+	<title>Javascript練習1204</title><!--迴圈,運算子,字串和變數串接,自動產生Ul & Li, todo-->
+	<meta charset="UTF-8">
+
+
+</head>
+<body>
+	
+	<input type="text" id="item">
+	<!--A <button id="bt">新增事項</button>第一種寫法-->
+	<!--B <button id="bt" onclick="newItem()">新增事項</button><!--第二種寫法-->
+	<button id="bt">新增事項</button><!--第三種寫法 -->
+	<ul id="todo">
+	</ul>
+	
+	<script>
+	/*document.getElementById("bt").onclick = function (){
+		var li = document.createElement ("li");
+		var listvalue = document.getElementById ("item").value;
+		var t = document.createTextNode (listvalue);//產生數值節點, 加雙引號是為取item內的輸入值
+		li.appendChild(t);
+		document.getElementById("todo").appendChild(li);	
+		document.getElementById("item").value="";	//清除輸入欄
+		
+	}*/
+	
+		function newItem(){		//第二種寫法,建議用法 + B宣告方式
+		var li = document.createElement ("li");
+		var listvalue = document.getElementById ("item").value;
+		var t = document.createTextNode (listvalue);//產生數值節點, 加雙引號是為取item內的輸入值
+		li.appendChild(t);
+		document.getElementById("todo").appendChild(li);	
+		document.getElementById("item").value="";	
+		
+		var span = document.createElement ("span");
+		var x = document.createTextNode (">>>>完成");
+		span.appendChild(x);
+		li.appendChild(span);	
+		span.className = "close";
+	}
+	
+		var bt = document.getElementById("bt");// 第三種寫法, + A宣告方式 + function newItem
+		bt.addEventListener("click", function(){//addEventlistener 事件監聽, 指用鍵盤或使滑鼠...點擊 
+		newItem();	
+	});
+
+		
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype=html>
+<head>
+	<title>Javascript練習1204</title><!--迴圈,運算子,字串和變數串接-->
+	<meta charset="UTF-8">
+
+
+</head>
+<body>
+	
+	<p id="output"></p>
+	<script>
+	
+	
+	
+	var data = {
+		name : "LBJ", email : "ABC@gmail.com"
+		}
+		
+		//var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+		//console.log (person);
+		
+		console.log (data.name);
+		var c = "<p>姓名:"+data.name+"</p>"
+		c += "<p>email:" +data.email+"</P>"
+		console.log (c);
+		
+		var output = document.getElementById("output")
+		//output.textContent = c;
+		output.innerHTML = c;
+		window.alert ("NBA");//產生對話方塊
+	
+	
+	
+	</script>
+
+
+</body>

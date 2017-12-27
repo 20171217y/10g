@@ -1,0 +1,32 @@
+<!doctype=html>
+<head>
+	<title>Javascript練習1204</title><!--迴圈,運算子,字串和變數串接,自動產生Ul & Li-->
+	<meta charset="UTF-8">
+
+
+</head>
+<body>
+	
+	 
+	<div id="output"></div>
+	<script>
+	
+	
+	
+	var data = {
+		name : "LBJ", email : "ABC@gmail.com", life : "庚子"
+		}
+		
+		var ul = document.createElement("ul")
+		var c = "<li>姓名:"+data.name+"</li>"
+		c += "<li>電子信箱:"+data.email+"</li>"
+		c += "<li>生辰八字:"+data.life+"</li>"
+		ul.innerHTML = c;//將li置入ul裡
+		document.getElementById("output").appendChild(ul)//加入子元素
+		
+	
+	
+	</script>
+
+
+</body>

@@ -1,0 +1,100 @@
+<!doctpye=html>
+<html>
+
+<head>
+<title>練習1129CSS</title>
+<meta charset="UTF-8">
+<link href="css/Style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<!--用link連結進來叫外部樣式;用style叫內部連節結樣式;用hi嵌入式樣式->
+<!--執行h1時連結外部檔案權重最小-->
+<style>
+     @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+    *{
+	font-family: 'Oswald', 'Noto Sans TC';
+	font-style: italic;
+	font-weight:600;
+	/*text-decoration:underline;*/ 
+	}/*萬用選舉器 font-family如加在.font .ddd ..則以其順位最高*/
+	h1 {
+    color:blue;	
+	}
+	.aaa{
+	color:DarkOliveGreen;
+	/*font-family: 'Oswald';*/
+	
+	}
+	#bbb{
+	color:DarkMagenta;
+    font-size:5em;	
+	/*text-decoration:overline;*/
+	/*text-decoration:underline;*/
+	/*text-decoration:line-through;*/ 
+	 
+	}
+	.ddd{
+	color: #36E312;
+	}
+	p{
+	font-size:3em;	
+	/*font-style: italic;*/
+		/*16px=12pt=1em*/
+	}
+	
+	.lorem1{
+	 /*text-align:right;*/
+     /*text-align:justify;*/ 
+	 font-size:16px;
+	 text-align:left;	 
+	 text-height:2em;
+	 word-spacing:20px
+	}
+	.lorem2{
+	 /*text-align:right;*/
+     /*text-align:justify;*/ 
+	 font-size:16px;
+	 /*text-align:left;*/	 
+	 text-height:2em;
+	 /*letter-spacing:5px*/
+	 /*text-transform:lowercase;*/
+	 /*text-transform:captialize;*/
+	 text-transform:uppercase;
+	}
+	.font{
+	
+	/*font-family: 'Noto Sans TC','微軟正黑體';*/
+	}/*fontsize 預設為新明細體, 英文字體放後面會被中至字型蓋掉*/
+	
+	a{
+	text-decoration: none;
+    font-size:3em;		
+	}
+	</style>
+	<!--權重次之,針對本文所有h1內文改變-->
+</head>
+
+<body>
+
+    <h1 class="aaa">20171129</h1><!--加style後權重最大-->
+	<h1 id="bbb">20171129</h1><!--加id後權重最大, 且bbb名稱不可重覆(html會過Javscrip一定踢掉---->
+	<h1 class="aaa">20171129</h1><!--加class權重次之, 且aaa名稱可重覆套用---->
+	<h1>20171129</h1><!--權重最小--->
+    <h1 class="ddd">20171129</h1>
+    <p class="font">ABCDEF</P>
+	<p class="font">民權東路</P>
+	<p class="lorem1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	<p class="lorem2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <a href="">ddd</a>
+    
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
